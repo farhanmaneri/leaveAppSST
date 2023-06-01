@@ -19,10 +19,13 @@
      </select>           
         <label for="name">Name:</label>
         <input type="text" id="name" required name="name">
+        <!-- cnic  -->
+        <label for="cnic">CNIC No:</label>
+        <input type="number" placeholder="XXXXX-XXXXXXX-X" id="cnic" required name="cnic">
         <!-- Designation -->
         <label for="designation">Designation:</label>
      <select id="designation" name="designation"  form="Mr_Ms">
-      <option value="PSHT">PSHT</option>
+      <option value="SST BPS-16">SST BPS-16</option>
       <option value="SPST">SPST</option>
       <option value="PST">PST</option>      
     </select><br>
@@ -86,13 +89,68 @@
     <thead>
       <tr>
         <th>S.No</th>
-          <th>Name & Designation</th>
-        <th>Current School/Station</th>
-        <th>Transfered to School/Station</th>
-        <th>Remarks</th>
+          <th>Particulars of Teacher</th>
+          <th></th>
+      
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>1</td>
+        <td>Name</td>
+        <td id="nameCell"></td> </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CNIC No</td>
+        <td id="cnicCell"></td> </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Substantive Basic Scale</td>
+        <td id="scaleCell"></td> </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Leave applied for (days)</td>
+        <td id="daysCell"></td> </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Type of leave i.e Earned Leave etc</td>
+        <td id="tpyeCell"></td> </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Will the applicant be in pakistan of<br> leaving for abroad</td>
+        <td id="abrodCell"></td> </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Exact date of availing</td>
+        <td id="exactCell"></td> </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Reason for Leave</td>
+        <td id="resonCell"></td> </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Personal Number</td>
+        <td id="personalCell"></td> </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Previous Leave Record</td>
+        <td id="recordCell"></td> </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Length of Service</td>
+        <td id="lengthCell"></td> </td>
+        
+      </tr>
     </tbody>
   </table>
 </div>
