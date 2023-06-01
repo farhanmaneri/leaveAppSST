@@ -9,10 +9,10 @@ const print = () => {
   document.getElementById('myForm').addEventListener('submit', function(event) {
 event.preventDefault()
   
-    // var gender = document.getElementById('gender').value;
+    var gender = document.getElementById('gender').value;
     var name = document.getElementById('name').value.toUpperCase();
-    document.getElementById("nameCell").textContent = name;
-    var cnic = document.getElementById('cnic').value.toUpperCase();
+    document.getElementById("nameCell").textContent = gender+" " +name;
+    var cnic = document.getElementById('cnic').value
     document.getElementById("cnicCell").textContent = cnic;
     
     var designation = document.getElementById('designation').value;

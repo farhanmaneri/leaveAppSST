@@ -31,7 +31,7 @@
     </select><br>
    
     <!-- current_station Lable -->
-    <label for="current_station">School/Station from where transfer:</label>
+    <label for="current_station">School/Station Name:</label>
     
     <!-- current school selection field -->
     <select id="old_station" name="old_station"  form="old_station">
@@ -41,25 +41,19 @@
       <option value="GGCMHS">GGCMHS</option>      
       <option value="GGPS">GGPS</option>      
     </select>
-    
-    <!-- current_station input field -->
-    <input type="text" id="current_station"required name="current_station">  <br>
-    <!-- New Station label -->
-    <label for="to_station">School/Station where to transfer:</label>
-    
-    <!-- New Station selection -->
-    <select id="new_station" name="new_station"  form="new_station">
-      <option value="GGHSS">GGHSS</option>
-      <option value="GGHS">GGHS</option>
-      <option value="GGCMS">GGCMS</option>      
-      <option value="GGCMHS">GGCMHS</option>      
-      <option value="GGPS">GGPS</option>      
-    </select>
-    <!-- New Station selection input field -->    
-    <input type="text" id="to_station" required name="to_station"><br/>
-    <!-- Remarks -->
-    <label for="remarks">Remarks:</label>
-    <input type="text" id="remarks" name="remarks"><br/>
+     
+    <label for="remarks">Leave From:</label>
+    <input type="date" id="remarks"  name="remarks">
+   
+    <label for="remarks">Upto:</label>
+    <input type="date" id="remarks"  name="remarks"><br/>
+    <label for="designation">Type of Leave:</label>
+    <select id="designation" name="designation"  form="Mr_Ms">
+     <option value="Maternity (Pre-Natal)">Maternity (Pre-Natal)</option>
+     <option value="Maternity (Post-Natal)">Maternity (Post-Natal)</option>
+     <option value="Earned Leave">Earned Leave</option>      
+     <option value="Meriage Leave">Meriage Leave</option>      
+   </select><br>
     <!-- submit Button -->
     <input type="submit" id="submitButton"  value="Submit">
   </form>
