@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Print Application</title>
+  <title>Leave Sanction</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
  <main>
 <div class="Input_container">
-  <h1>Transfer Form</h1>
+  <h1>Leave Sancton Form</h1>
+  <p>Insert the required value in cells in order to print leave sanction</p>
   <div class="inputs_div">
  
   <form id="myForm">
@@ -22,39 +23,62 @@
         <!-- cnic  -->
         <label for="cnic">CNIC No:</label>
         <input type="number" placeholder="XXXXX-XXXXXXX-X" id="cnic" required name="cnic">
-        <!-- Designation -->
+      <!-- Designation -->
         <label for="designation">Designation:</label>
      <select id="designation" name="designation"  form="Mr_Ms">
       <option value="SST BPS-16">SST BPS-16</option>
       <option value="SPST">SPST</option>
       <option value="PST">PST</option>      
-    </select><br>
+    </select>
    
-    <!-- current_station Lable -->
-    <label for="current_station">School/Station Name:</label>
-    
+  
     <!-- current school selection field -->
-    <select id="old_station" name="old_station"  form="old_station">
+    <label for="current_station">School/Station Name:</label>
+    <select id="current_station" name="current_station"  form="current_station">
       <option value="GGHSS">GGHSS</option>
       <option value="GGHS">GGHS</option>
       <option value="GGCMS">GGCMS</option>      
       <option value="GGCMHS">GGCMHS</option>      
       <option value="GGPS">GGPS</option>      
-    </select>
+    </select><br>
      
-    <label for="remarks">Leave From:</label>
-    <input type="date" id="remarks"  name="remarks">
+    <label for="leave_from">Leave From:</label>
+    <input type="date" id="leave_from"  name="leave_from">
    
-    <label for="remarks">Upto:</label>
-    <input type="date" id="remarks"  name="remarks"><br/>
-    <label for="designation">Type of Leave:</label>
-    <select id="designation" name="designation"  form="Mr_Ms">
-     <option value="Maternity (Pre-Natal)">Maternity (Pre-Natal)</option>
-     <option value="Maternity (Post-Natal)">Maternity (Post-Natal)</option>
-     <option value="Earned Leave">Earned Leave</option>      
-     <option value="Meriage Leave">Meriage Leave</option>      
+    <label for="leave_upto">Upto:</label>
+    <input type="date" id="leave_upto"  name="leave_upto">
+   
+    <label for="leaveTpye">Type of Leave:</label>
+    <select id="leaveTpye" name="leaveTpye"  form="Mr_Ms">
+      <option value="Maternity (Pre-Natal)">Maternity (Pre-Natal)</option>
+      <option value="Maternity (Post-Natal)">Maternity (Post-Natal)</option>
+      <option value="Earned Leave">Earned Leave</option>      
+      <option value="Meriage Leave">Meriage Leave</option>      
+    </select>
+    
+    <label for="leaveTpye">Will avial leave at country or abroad:</label>
+    <select id="country_abroad" name="country_abroad"  form="country_abroad">
+     <option value="Pakistan">Pakistan</option>
+     <option value="Abroad">Abroad</option>   
    </select><br>
-    <!-- submit Button -->
+   <!-- Availing leave from  -->
+   <label for="leave_date">Exact date of availing leave from:</label>
+   <input type="date" id="leave_date"  name="leave_date">
+   <!-- Reason of leave  -->
+   <label for="reason">Reason for Leave:</label>
+   <input type="text" id="reason"  name="reason">
+    <!-- Personal Number  -->
+   <label for="personal_number">Personal Number:</label>
+   <input type="number" id="personal_number"  name="personal_number">
+    <!-- Previous leave record   --><br>
+   <label for="previous_leave">Previous Leave Record:</label>
+   <input type="text" id="previous_leave"  name="previous_leave">
+   <!-- Length of Service  -->
+   <label for="service_length">Length of Service</label>
+   <input type="Text" id="service_length"  name="service_length">
+
+   
+   <!-- submit Button -->
     <input type="submit" id="submitButton"  value="Submit">
   </form>
 </div>
@@ -75,16 +99,18 @@
   
   <div>
     <div>
-      <h4><u>TRANSFER ORDER</u></h4>
-      <p><span class="application_note">The competent authority is pleased to transfer the following teachers on their </span>
-     own pay and BPS in the Schools noted against each in the best interest of public service with immediate effect.</p>
+      <h4> To<br>
+        The Director<br> 
+         Elementary & Secondary Education <br> 
+         Khyber Pakhtunkhwa Peshawar.</h4>
+      <p> Enclosed please find herewith the original application along with Baby Birth Certificate, Fitness Certificate and other relevant documents for the grant of Pre-Natal Maternity Leave with effect from 23-02-2023 to 02-04-2023 (39 days) and Post-Natal Leave wef 03-04-2023 to 17-05-2023 (45 days) on full pay  in respect of   Mst: Danish Bibi SST-G GGHS Manki Swabi duly verified by the DAO Swabi  is sent  herewith  for further necessary action please.</p>
     </div>
   <table id="dataTable">
     <thead>
       <tr>
         <th>S.No</th>
-          <th>Particulars of Teacher</th>
-          <th></th>
+          <th colspan="2">Particulars of Teacher</th>
+          
       
       </tr>
     </thead>
@@ -107,42 +133,42 @@
       <tr>
         <td>4</td>
         <td>Leave applied for (days)</td>
-        <td id="daysCell"></td> </td>
+        <td id="leaveCell"></td> </td>
       </tr>
       <tr>
         <td>5</td>
         <td>Type of leave i.e Earned Leave etc</td>
-        <td id="tpyeCell"></td> </td>
+        <td id="leaveTpyeCell"></td> </td>
       </tr>
       <tr>
         <td>6</td>
         <td>Will the applicant be in pakistan of<br> leaving for abroad</td>
-        <td id="abrodCell"></td> </td>
+        <td id="countryCell"></td> </td>
       </tr>
       <tr>
         <td>7</td>
         <td>Exact date of availing</td>
-        <td id="exactCell"></td> </td>
+        <td id="exactDateCell"></td> </td>
       </tr>
       <tr>
         <td>8</td>
         <td>Reason for Leave</td>
-        <td id="resonCell"></td> </td>
+        <td id="reasonCell"></td> </td>
       </tr>
       <tr>
         <td>9</td>
         <td>Personal Number</td>
-        <td id="personalCell"></td> </td>
+        <td id="personalNoCell"></td> </td>
       </tr>
       <tr>
         <td>10</td>
         <td>Previous Leave Record</td>
-        <td id="recordCell"></td> </td>
+        <td id="previouLeaveCell"></td> </td>
       </tr>
       <tr>
         <td>11</td>
         <td>Length of Service</td>
-        <td id="lengthCell"></td> </td>
+        <td id="serviceLengthCell"></td> </td>
         
       </tr>
     </tbody>
@@ -151,39 +177,14 @@
 <div class="dic">
   <div class="note_stamp">
   <div class="noteMaindiv">
-    <div class="noteDiv">
-  <h3>Note:</h3>	<ol>
-    <li> Charge report should be submitted to all concerned.</li>
-    <li>TA/DA is not allowed. </li>
-  </ol> 
-</div>
-  
-</div>
-<div class="Stamp">
-  <h3>
-  (SOFIA TABASSUM)  <br>                                                                                       
-  District Education Officer <br>
-          (Female) Swabi
-</h3>
-</div>
-</div>
+   
+
 <div>
 
-  <p>Endst: No.______________/Transfer/__________________/       Dated Swabi the _____________/2023<br>
+  <p>Endst: No.______________/       Dated Swabi the __________/________/2023<br>
 </div>
 <div class="Endst_stamp">
-<div class="Endst">
 
-    Copy of the above is forwarded for information to the: -<br></p>
-  <ol>
-    <li>Deputy Commissioner Swabi.  </li>
-    <li>District Accounts Officer Swabi.</li>
-    <li>District Education Monitoring Officer Swabi.  </li>
-    <li>Official concerned. </li>
-    <li id="sdeo">SDEO (F) Concerned.   </li>
-    <li id="ph">Principle/Head Mistress Concerned.   </li>
-  </ol>
-</div>
 <div class="Stamp">
   <h3>  Deputy District Education Officer<br>
     (Female) Swabi</h3>
