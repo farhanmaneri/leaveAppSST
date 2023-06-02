@@ -12,7 +12,8 @@ event.preventDefault()
     var gender = document.getElementById('gender').value;
 
     var name = document.getElementById('name').value.toUpperCase();
-    document.getElementById("nameCell").textContent = gender+" " +name;
+    document.getElementsByClassName("nameCell").textContent = gender+" " +name;
+    document.getElementById('nameSpan').textContent = gender+" "+ name;
     
     var cnic = document.getElementById('cnic').value
     document.getElementById("cnicCell").textContent = cnic;
@@ -20,9 +21,12 @@ event.preventDefault()
     var designation = document.getElementById('designation').value;
     document.getElementById("scaleCell").textContent = designation;
     
+    var school = document.getElementById('school').value;
+    document.getElementById("schoolCell").textContent = school;
+   
     var leave_from = document.getElementById('leave_from').value;
     var leave_upto = document.getElementById('leave_upto').value;
-    document.getElementById("leaveCell").textContent = leave_from+" " +"to"+""+ leave_upto;
+    document.getElementById("leaveCell").textContent = leave_from+" " +"to"+" "+ leave_upto;
    
     var leaveTpye = document.getElementById('leaveTpye').value;
     document.getElementById("leaveTpyeCell").textContent = leaveTpye;    
@@ -50,25 +54,7 @@ event.preventDefault()
     
     
     
-    // var table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
-    // var rowIndex = table.rows.length + 1; // Get the new rowIndex
-    // var newRow = table.insertRow();
-    
-
-  
-
-    // var serialCell = newRow.insertCell(0)
-    // var nameCell = newRow.insertCell(1);
-    // var current_stationCell = newRow.insertCell(2);
-    // // var to_stationCell = newRow.insertCell(3);
-    // // var remarksCell = newRow.insertCell(4);
-
-    // // serialCell.innerHTML = rowIndex
-    // // nameCell.innerHTML = gender +" "+ name  +","+" "+ designation
-    // // nameCell.innerHTML = "Name"
-    // current_stationCell.innerHTML = old_station +" "+current_station;
-    // to_stationCell.innerHTML = new_station +" "+to_station;
-    // remarksCell.innerHTML = remarks;
+   
 
     document.getElementById('myForm').reset();
   

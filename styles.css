@@ -80,7 +80,7 @@ table {
     border-collapse: collapse;
     border: 2px solid black;
     border-radius: 50px;
-    margin: 6px 50px 6px 20px;
+    margin: 6px;
     width: auto;
   }
   table td:first-child,
@@ -90,23 +90,26 @@ table {
   }
   table td:nth-child(2),
   table th:nth-child(2) {
-    width: 300px; /* Set the width of the second column */
+    width: 325px; /* Set the width of the second column */
   }
   table td:nth-child(3),
   table th:nth-child(3) {
-    width: 300px; /* Set the width of the second column */
+    width: 325px; /* Set the width of the second column */
   }
   th, td {
     border: 1px solid black;
-    padding: 10px;  
+    padding: 5px;  
   }
-  .noteMaindiv{
-    display: flex;
-    width: auto;
-    /* border: 1px solid red; */
-  }
+ 
   .note_stamp{
     display: flex;
+  
+  }
+  .noteMaindiv{
+    text-align: left;
+    margin-right: 27%;
+    /* border: 1px solid red; */
+    margin-top: 3px;
   }
   .Endst_stamp{
     display: flex;
@@ -115,22 +118,22 @@ table {
     width: auto;
     /* border: 1px solid blue; */
   }
-  .Stamp{
+  .Endst_stamp{
     display: flex;
-    align-self: end;
-    width: 300px;
-    margin-left: auto;
-    width: 50%;
-text-align: center;
-margin-right: 10px;
-margin-top: 30px;
+    align-self: end;   
+    margin-left: 40%;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 50px;
+  
   }
-  .Stamp{
-width: fit-content;
-    /* border: 1px solid rebeccapurple; */
+  .to_director{
+    margin: 10px;
+    text-align: justify;
   }
-  .dic{
-    width: 100%;
+  p.to_director{
+
+    padding: 2px;
   }
 
 .application_header{
