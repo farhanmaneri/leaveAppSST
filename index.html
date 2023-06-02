@@ -24,7 +24,7 @@
           <input type="text" id="name" required name="name">
           <!-- cnic  -->
           <label for="cnic">CNIC No:</label>
-          <input type="number" placeholder="XXXXX-XXXXXXX-X" id="cnic" required name="cnic">
+          <input type="number" required placeholder="XXXXX-XXXXXXX-X" id="cnic" required name="cnic">
           <!-- Designation -->
           <label for="designation">Designation:</label>
           <select id="designation" name="designation" form="Mr_Ms">
@@ -43,13 +43,13 @@
             <option value="GGCMHS">GGCMHS</option>
             <option value="GGPS">GGPS</option>
           </select><br>
-          <input type="text" id="school" name="school">
+          <input type="text" required id="school" name="school">
 
           <label for="leave_from">Leave From:</label>
-          <input type="date" id="leave_from" name="leave_from">
+          <input type="date" required id="leave_from" name="leave_from">
 
           <label for="leave_upto">Upto:</label>
-          <input type="date" id="leave_upto" name="leave_upto">
+          <input type="date" required id="leave_upto" name="leave_upto">
 
           <label for="leaveTpye">Type of Leave:</label>
           <select id="leaveTpye" name="leaveTpye" form="Mr_Ms">
@@ -66,19 +66,19 @@
           </select><br>
           <!-- Availing leave from  -->
           <label for="leave_date">Exact date of availing leave from:</label>
-          <input type="date" id="leave_date" name="leave_date">
+          <input type="date"required id="leave_date" name="leave_date">
           <!-- Reason of leave  -->
           <label for="reason">Reason for Leave:</label>
-          <input type="text" id="reason" name="reason">
+          <input type="text" required id="reason" name="reason">
           <!-- Personal Number  -->
           <label for="personal_number">Personal Number:</label>
-          <input type="number" id="personal_number" name="personal_number">
+          <input type="number" required id="personal_number" name="personal_number">
           <!-- Previous leave record   --><br>
           <label for="previous_leave">Previous Leave Record:</label>
-          <input type="text" id="previous_leave" name="previous_leave">
+          <input type="text"required id="previous_leave" name="previous_leave">
           <!-- Length of Service  -->
           <label for="service_length">Length of Service</label>
-          <input type="Text" id="service_length" name="service_length">
+          <input type="Text" id="service_length" required name="service_length">
 
 
           <!-- submit Button -->
@@ -111,8 +111,8 @@
                 Khyber Pakhtunkhwa Peshawar.</p>
             </div>
             <p> Enclosed please find herewith the original application along with relevant documents for the grant of with effect from
-              23-02-2023 to 02-04-2023 (39 days) on full pay
-              in respect of <span class="nameSpan">  </span> <span>SST-G </span> <span>GGHS </span> Manki<span> </span>  Swabi duly verified by the DAO Swabi is sent herewith for
+            <u> <b> <span id="datesSpan"></span></b></u> </span></u> (<u><span id="totalDaysSpan"></span></u> days) on full pay
+              in respect of <b><span id="nameSpan">  </span ></b> <span id="scaleSpan"> </span></span><span id="schoolSpan"></span> <span> </span>  Swabi duly verified by the DAO Swabi is sent herewith for
               further necessary action please.</p>
           </div>
           <table id="dataTable">
@@ -128,7 +128,7 @@
               <tr>
                 <td>1</td>
                 <td>Name</td>
-                <td class="nameCell"></td>
+                <td id="nameCell"></td>
                 </td>
               </tr>
               <tr>
@@ -202,7 +202,7 @@
                 <p>Endst: No.______________/ Dated Swabi the __________/________/2023<br></p>
                 <p>Copy of the above forwarded to for information to the:-</p>
                 <ol>
-                  <li>To the Principle/Head Mistress</li>
+                  <li>To the Principle/Head Mistress <span id="copyToSchool"></span></li>
                 </ol>
               </div>
             <div class="Endst_stamp">

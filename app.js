@@ -12,8 +12,8 @@ event.preventDefault()
     var gender = document.getElementById('gender').value;
 
     var name = document.getElementById('name').value.toUpperCase();
-    document.getElementsByClassName("nameCell").textContent = gender+" " +name;
     document.getElementById('nameSpan').textContent = gender+" "+ name;
+    document.getElementById("nameCell").textContent = gender+" " +name;
     
     var cnic = document.getElementById('cnic').value
     document.getElementById("cnicCell").textContent = cnic;
@@ -21,13 +21,16 @@ event.preventDefault()
     var designation = document.getElementById('designation').value;
     document.getElementById("scaleCell").textContent = designation;
     
+    var current_station = document.getElementById('current_station').value;
     var school = document.getElementById('school').value;
-    document.getElementById("schoolCell").textContent = school;
+    document.getElementById("schoolSpan").textContent = current_station +" "+school;
+    document.getElementById("copyToSchool").textContent = current_station +" "+school;
    
     var leave_from = document.getElementById('leave_from').value;
     var leave_upto = document.getElementById('leave_upto').value;
     document.getElementById("leaveCell").textContent = leave_from+" " +"to"+" "+ leave_upto;
-   
+    document.getElementById("datesSpan").textContent = leave_from+" " +"to"+" "+ leave_upto;
+       
     var leaveTpye = document.getElementById('leaveTpye').value;
     document.getElementById("leaveTpyeCell").textContent = leaveTpye;    
     
@@ -53,8 +56,7 @@ event.preventDefault()
     document.getElementById("serviceLengthCell").textContent = service_length;    
     
     
-    
-   
+      
 
     document.getElementById('myForm').reset();
   
