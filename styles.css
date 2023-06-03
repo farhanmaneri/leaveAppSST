@@ -45,17 +45,24 @@ main{
     border-radius: 10px;
     background: rgba(255, 253, 253, 0.692);
 }
+#dateSpan,#nameSpan, #datesSpan,#totalDaysSpan {
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
 input{
     padding: 6px;
     margin: 6px;
     border: 2px solid gainsboro;
     border-radius: 6px;
 }
-#gender, #designation, #old_station, #new_station{
+#gender, #designation, #old_station,#current_station,#leave_from, #new_station, #leaveTpye, #country_abroad{
     padding: 6px;
     margin: 4px;
     border: 2px solid gainsboro;
     border-radius: 6px;
+    margin: 2px;
 }
 .print_section{
   width: 100%;
@@ -114,9 +121,12 @@ table {
   .Endst_stamp{
     display: flex;
   }
-  .Endst{
-    width: auto;
-    /* border: 1px solid blue; */
+ 
+  .director{
+    margin-left: 35px;
+  }
+  .firstPara span:first-of-type {
+    margin-left: 35px;
   }
   .Endst_stamp{
     display: flex;

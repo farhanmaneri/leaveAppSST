@@ -42,7 +42,7 @@
             <option value="GGCMS">GGCMS</option>
             <option value="GGCMHS">GGCMHS</option>
             <option value="GGPS">GGPS</option>
-          </select><br>
+          </select>
           <input type="text" required id="school" name="school">
 
           <label for="leave_from">Leave From:</label>
@@ -50,7 +50,7 @@
 
           <label for="leave_upto">Upto:</label>
           <input type="date" required id="leave_upto" name="leave_upto">
-
+<br>
           <label for="leaveTpye">Type of Leave:</label>
           <select id="leaveTpye" name="leaveTpye" form="Mr_Ms">
             <option value="Maternity (Pre-Natal)">Maternity (Pre-Natal)</option>
@@ -59,24 +59,24 @@
             <option value="Meriage Leave">Meriage Leave</option>
           </select>
 
-          <label for="leaveTpye">Will avial leave at country or abroad:</label>
+          <label for="country_abroad">Will avial leave at country or abroad:</label>
           <select id="country_abroad" name="country_abroad" form="country_abroad">
             <option value="Pakistan">Pakistan</option>
             <option value="Abroad">Abroad</option>
           </select><br>
           <!-- Availing leave from  -->
           <label for="leave_date">Exact date of availing leave from:</label>
-          <input type="date"required id="leave_date" name="leave_date">
+          <input type="date" required id="leave_date" name="leave_date">
           <!-- Reason of leave  -->
           <label for="reason">Reason for Leave:</label>
           <input type="text" required id="reason" name="reason">
-          <!-- Personal Number  -->
+          <!-- Personal Number  --><br>
           <label for="personal_number">Personal Number:</label>
           <input type="number" required id="personal_number" name="personal_number">
-          <!-- Previous leave record   --><br>
+          <!-- Previous leave record   -->
           <label for="previous_leave">Previous Leave Record:</label>
-          <input type="text"required id="previous_leave" name="previous_leave">
-          <!-- Length of Service  -->
+          <input type="text" required id="previous_leave" name="previous_leave">
+          <!-- Length of Service  --><br>
           <label for="service_length">Length of Service</label>
           <input type="Text" id="service_length" required name="service_length">
 
@@ -102,18 +102,27 @@
 
         <div>
           <div class="to_director">
-            <div>
+            <div class="to">
               <p>To</p>
             </div>
-            <div>
+            <div class="director">
               <p>The Director <br>
                 Elementary & Secondary Education <br>
                 Khyber Pakhtunkhwa Peshawar.</p>
             </div>
-            <p> Enclosed please find herewith the original application along with relevant documents for the grant of with effect from
-            <u> <b> <span id="datesSpan"></span></b></u> </span></u> (<u><span id="totalDaysSpan"></span></u> days) on full pay
-              in respect of <b><span id="nameSpan">  </span ></b> <span id="scaleSpan"> </span></span><span id="schoolSpan"></span> <span> </span>  Swabi duly verified by the DAO Swabi is sent herewith for
-              further necessary action please.</p>
+            <div class="firstPara">
+              <p><span> Enclosed please find herewith the original application along with relevant
+                  documents for the grant</span> <span id="leaveTpyeSpan"></span> of with effect from
+                 <span id="datesSpan"></span> </span>
+                 (<span id="totalDaysSpan"></span>
+                days) on full pay in respect of <span id="nameSpan"></span>
+                <span id="scaleSpan"> </span>
+                </span><span id="schoolSpan"></span> 
+                <span> </span>
+                Swabi duly verified by the DAO Swabi is sent herewith for
+                further necessary action please.
+              </p>
+            </div>
           </div>
           <table id="dataTable">
             <thead>
@@ -195,25 +204,25 @@
             </tbody>
           </table>
         </div>
-       
-          
-            <div class="noteMaindiv">
-             
-                <p>Endst: No.______________/ Dated Swabi the __________/________/2023<br></p>
-                <p>Copy of the above forwarded to for information to the:-</p>
-                <ol>
-                  <li>To the Principle/Head Mistress <span id="copyToSchool"></span></li>
-                </ol>
-              </div>
-            <div class="Endst_stamp">
-              <div class="Stamp">
-                <h3> Deputy District Education Officer<br>
-                  (Female) Swabi</h3>
-              </div>
-            </div>
-            <button id="myButton" onclick="print()">Print</button>
-          
-       
+
+
+        <div class="noteMaindiv">
+
+          <p>Endst: No.______________/ Dated Swabi the __________/________/2023<br></p>
+          <p>Copy of the above forwarded to for information to the:-</p>
+          <ol>
+            <li>To the Principle/Head Mistress <span id="copyToSchool"></span></li>
+          </ol>
+        </div>
+        <div class="Endst_stamp">
+          <div class="Stamp">
+            <h3> Deputy District Education Officer<br>
+              (Female) Swabi</h3>
+          </div>
+        </div>
+        <button id="myButton" onclick="print()">Print</button>
+
+
 
 
 
